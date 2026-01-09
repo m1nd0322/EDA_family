@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="45" fill="#4A90E2" stroke="#357ABD" stroke-width="3"/>
+  <text x="50" y="35" font-size="20" text-anchor="middle" fill="white" font-family="Arial">👨‍💼</text>
+  <text x="50" y="70" font-size="12" text-anchor="middle" fill="white" font-family="Arial" font-weight="bold">FATHER</text>
+</svg>

@@ -1,0 +1,31 @@
+import,Product,Price,Quantity,Category,Rating,Date
+1,Laptop,999.99,5,Electronics,4.5,2024-01-01
+2,Smartphone,699.99,10,Electronics,4.7,2024-01-02
+3,Tablet,449.99,8,Electronics,4.2,2024-01-03
+4,Headphones,149.99,15,Electronics,4.8,2024-01-04
+5,Monitor,299.99,3,Electronics,4.3,2024-01-05
+6,Keyboard,79.99,20,Electronics,4.4,2024-01-06
+7,Mouse,39.99,25,Electronics,4.1,2024-01-07
+8,Printer,199.99,2,Electronics,3.9,2024-01-08
+9,Desk,399.99,1,Furniture,4.6,2024-01-09
+10,Chair,299.99,4,Furniture,4.4,2024-01-10
+11,Sofa,799.99,,Furniture,4.7,2024-01-11
+12,Table,199.99,6,Furniture,4.2,2024-01-12
+13,Book,14.99,30,Books,4.5,2024-01-13
+14,Pen,2.99,50,Books,4.0,2024-01-14
+15,Notebook,5.99,40,Books,4.3,2024-01-15
+16,Backpack,49.99,12,Books,4.6,2024-01-16
+17,Calculator,19.99,18,Books,4.1,2024-01-17
+18,Stapler,9.99,22,Books,3.8,2024-01-18
+19,Paper,8.99,35,Books,4.2,2024-01-19
+20,Highlighter,3.99,28,Books,4.4,2024-01-20
+21,T-Shirt,24.99,7,Clothing,4.3,2024-01-21
+22,Jeans,49.99,9,Clothing,4.5,2024-01-22
+23,Dress,79.99,5,Clothing,4.7,2024-01-23
+24,Shoes,89.99,4,Clothing,4.6,2024-01-24
+25,Watch,199.99,3,Electronics,4.8,2024-01-25
+26,Camera,549.99,2,Electronics,4.9,2024-01-26
+27,Speaker,129.99,8,Electronics,4.4,2024-01-27
+28,Mousepad,12.99,21,Electronics,4.0,2024-01-28
+29,HDMI Cable,19.99,17,Electronics,4.2,2024-01-29
+30,USB Drive,29.99,15,Electronics,4.3,2024-01-30

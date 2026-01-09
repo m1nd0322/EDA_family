@@ -1,0 +1,10 @@
+node_modules
+out
+.vscode-test
+*.vsix
+eda_output
+.DS_Store
+*.log
+.env
+dist
+coverage

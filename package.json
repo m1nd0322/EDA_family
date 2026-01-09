@@ -1,0 +1,126 @@
+{
+  "name": "eda-family-orchestration",
+  "displayName": "EDA Family Orchestration",
+  "description": "Multi-role EDA orchestration system with Father, Mother, Son, and Daughter roles",
+  "version": "0.0.1",
+  "publisher": "your-publisher-name",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Machine Learning",
+    "Data Science",
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:eda-family.startWorkflow",
+    "onView:edaFamilyExplorer"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "eda-family.startWorkflow",
+        "title": "Start EDA Family Workflow",
+        "category": "EDA Family"
+      },
+      {
+        "command": "eda-family.configureFather",
+        "title": "Configure Father Role",
+        "category": "EDA Family"
+      },
+      {
+        "command": "eda-family.resetWorkflow",
+        "title": "Reset Workflow",
+        "category": "EDA Family"
+      },
+      {
+        "command": "eda-family.exportResults",
+        "title": "Export EDA Results",
+        "category": "EDA Family"
+      }
+    ],
+    "views": {
+      "eda-family": [
+        {
+          "id": "edaFatherView",
+          "name": "Father (Director)",
+          "icon": "resources/father-icon.svg"
+        },
+        {
+          "id": "edaMotherView",
+          "name": "Mother (Data Provider)",
+          "icon": "resources/mother-icon.svg"
+        },
+        {
+          "id": "edaSonView",
+          "name": "Son (Executor)",
+          "icon": "resources/son-icon.svg"
+        },
+        {
+          "id": "edaDaughterView",
+          "name": "Daughter (Critic)",
+          "icon": "resources/daughter-icon.svg"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "eda-family",
+          "title": "EDA Family",
+          "icon": "resources/icon.svg"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "EDA Family",
+      "properties": {
+        "edaFamily.dataPath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to the data directory"
+        },
+        "edaFamily.outputPath": {
+          "type": "string",
+          "default": "./eda_output",
+          "description": "Path for EDA output results"
+        },
+        "edaFamily.maxCritiqueIterations": {
+          "type": "number",
+          "default": 3,
+          "description": "Maximum number of critique iterations"
+        },
+        "edaFamily.autoProceed": {
+          "type": "boolean",
+          "default": false,
+          "description": "Auto-proceed through workflow stages"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20.10.0",
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "eslint": "^8.54.0",
+    "glob": "^13.0.0",
+    "mocha": "^11.7.5",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "@vscode/vsce": "^2.22.0"
+  }
+}
