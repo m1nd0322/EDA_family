@@ -73,7 +73,7 @@ export class MotherRole {
       filename: path.basename(filePath),
       directory: path.dirname(filePath),
       format,
-      last_modified: (await fs.promises.stat(filePath)).mtime
+      last_modified: (await fs.promises.stat(filePath)).mtime.toISOString()
     };
 
     if (format === '.csv') {

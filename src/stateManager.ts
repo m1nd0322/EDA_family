@@ -40,15 +40,17 @@ export class StateManager {
 
   public updateState(updates: Partial<WorkflowState>): void {
     this.state = { ...this.state, ...updates };
-    
+
     if (updates.currentStage) {
+      // Exclude history from details to avoid circular reference
+      const { history: _history, ...detailsWithoutHistory } = updates;
       this.state.history.push({
         stage: updates.currentStage,
         timestamp: Date.now(),
-        details: updates
+        details: detailsWithoutHistory
       });
     }
-    
+
     this.saveState();
     vscode.commands.executeCommand('eda-family.refreshViews');
   }

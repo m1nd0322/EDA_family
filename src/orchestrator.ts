@@ -152,7 +152,7 @@ export class WorkflowOrchestrator {
   }
 
   private async executeFatherStage(): Promise<void> {
-    vscode.window.withProgress({
+    await vscode.window.withProgress({
       location: vscode.ProgressLocation.Notification,
       title: '👨‍💼 Father: Creating EDA instruction...',
       cancellable: false
@@ -172,7 +172,7 @@ export class WorkflowOrchestrator {
   }
 
   private async executeMotherStage(): Promise<void> {
-    vscode.window.withProgress({
+    await vscode.window.withProgress({
       location: vscode.ProgressLocation.Notification,
       title: '👩‍💼 Mother: Preparing data...',
       cancellable: false
@@ -192,7 +192,7 @@ export class WorkflowOrchestrator {
   }
 
   private async executeSonStage(critique?: any): Promise<void> {
-    vscode.window.withProgress({
+    await vscode.window.withProgress({
       location: vscode.ProgressLocation.Notification,
       title: '👦 Son: Executing EDA...',
       cancellable: false

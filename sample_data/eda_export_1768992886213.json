@@ -1,0 +1,258 @@
+{
+  "timestamp": "2026-01-21T10:54:51.478Z",
+  "workflow": {
+    "currentStage": "completed",
+    "iterationCount": 0,
+    "history": [
+      {
+        "stage": "idle",
+        "timestamp": 1768992834843,
+        "details": {
+          "currentStage": "idle",
+          "iterationCount": 0
+        }
+      },
+      {
+        "stage": "father_instruction",
+        "timestamp": 1768992850629,
+        "details": {
+          "instruction": {
+            "id": "inst_1768992848972_nzhxof0n9",
+            "type": "time_series_analysis",
+            "description": "csv 파일에 대해 시계열 분석해줘",
+            "parameters": {
+              "frequency": "D",
+              "trend_analysis": true
+            },
+            "priority": "high"
+          },
+          "currentStage": "father_instruction"
+        }
+      },
+      {
+        "stage": "mother_delivery",
+        "timestamp": 1768992865462,
+        "details": {
+          "data": {
+            "id": "data_1768992865460_5kmrj1krf",
+            "path": "d:\\99_ETC\\Personal\\EDA_family\\sample_data\\products.csv",
+            "format": "csv",
+            "size": 1365,
+            "metadata": {
+              "filename": "products.csv",
+              "directory": "d:\\99_ETC\\Personal\\EDA_family\\sample_data",
+              "format": ".csv",
+              "last_modified": "2026-01-09T01:45:53.112Z",
+              "row_count": 30,
+              "columns": [
+                "import",
+                "Product",
+                "Price",
+                "Quantity",
+                "Category",
+                "Rating",
+                "Date"
+              ],
+              "column_count": 7,
+              "sample_rows": [
+                "1,Laptop,999.99,5,Electronics,4.5,2024-01-01",
+                "2,Smartphone,699.99,10,Electronics,4.7,2024-01-02",
+                "3,Tablet,449.99,8,Electronics,4.2,2024-01-03",
+                "4,Headphones,149.99,15,Electronics,4.8,2024-01-04",
+                "5,Monitor,299.99,3,Electronics,4.3,2024-01-05"
+              ]
+            }
+          },
+          "currentStage": "mother_delivery"
+        }
+      },
+      {
+        "stage": "son_execution",
+        "timestamp": 1768992873090,
+        "details": {
+          "execution": {
+            "id": "exec_1768992865464_7z8j7cv88",
+            "instructionId": "inst_1768992848972_nzhxof0n9",
+            "dataId": "data_1768992865460_5kmrj1krf",
+            "results": [
+              {
+                "instruction_type": "time_series_analysis",
+                "data_shape": [
+                  30,
+                  7
+                ],
+                "columns": [
+                  "import",
+                  "Product",
+                  "Price",
+                  "Quantity",
+                  "Category",
+                  "Rating",
+                  "Date"
+                ],
+                "dtypes": {
+                  "import": "int64",
+                  "Product": "object",
+                  "Price": "float64",
+                  "Quantity": "float64",
+                  "Category": "object",
+                  "Rating": "float64",
+                  "Date": "object"
+                },
+                "analysis": {
+                  "time_series": {
+                    "note": "Time series analysis requires proper datetime column configuration",
+                    "available_columns": [
+                      "import",
+                      "Product",
+                      "Price",
+                      "Quantity",
+                      "Category",
+                      "Rating",
+                      "Date"
+                    ],
+                    "numeric_columns": [
+                      "import",
+                      "Price",
+                      "Quantity",
+                      "Rating"
+                    ],
+                    "trend_analysis_enabled": true
+                  }
+                }
+              }
+            ],
+            "status": "completed"
+          },
+          "currentStage": "son_execution"
+        }
+      },
+      {
+        "stage": "daughter_critique",
+        "timestamp": 1768992873092,
+        "details": {
+          "critique": {
+            "id": "critique_1768992873091_eqspdi6ds",
+            "executionId": "exec_1768992865464_7z8j7cv88",
+            "feedback": "Excellent analysis! The results are comprehensive and well-presented.",
+            "issues": [],
+            "status": "excellent",
+            "timestamp": 1768992873091
+          },
+          "iterationCount": 0,
+          "currentStage": "daughter_critique"
+        }
+      },
+      {
+        "stage": "completed",
+        "timestamp": 1768992873092,
+        "details": {
+          "currentStage": "completed"
+        }
+      }
+    ],
+    "instruction": {
+      "id": "inst_1768992848972_nzhxof0n9",
+      "type": "time_series_analysis",
+      "description": "csv 파일에 대해 시계열 분석해줘",
+      "parameters": {
+        "frequency": "D",
+        "trend_analysis": true
+      },
+      "priority": "high"
+    },
+    "data": {
+      "id": "data_1768992865460_5kmrj1krf",
+      "path": "d:\\99_ETC\\Personal\\EDA_family\\sample_data\\products.csv",
+      "format": "csv",
+      "size": 1365,
+      "metadata": {
+        "filename": "products.csv",
+        "directory": "d:\\99_ETC\\Personal\\EDA_family\\sample_data",
+        "format": ".csv",
+        "last_modified": "2026-01-09T01:45:53.112Z",
+        "row_count": 30,
+        "columns": [
+          "import",
+          "Product",
+          "Price",
+          "Quantity",
+          "Category",
+          "Rating",
+          "Date"
+        ],
+        "column_count": 7,
+        "sample_rows": [
+          "1,Laptop,999.99,5,Electronics,4.5,2024-01-01",
+          "2,Smartphone,699.99,10,Electronics,4.7,2024-01-02",
+          "3,Tablet,449.99,8,Electronics,4.2,2024-01-03",
+          "4,Headphones,149.99,15,Electronics,4.8,2024-01-04",
+          "5,Monitor,299.99,3,Electronics,4.3,2024-01-05"
+        ]
+      }
+    },
+    "execution": {
+      "id": "exec_1768992865464_7z8j7cv88",
+      "instructionId": "inst_1768992848972_nzhxof0n9",
+      "dataId": "data_1768992865460_5kmrj1krf",
+      "results": [
+        {
+          "instruction_type": "time_series_analysis",
+          "data_shape": [
+            30,
+            7
+          ],
+          "columns": [
+            "import",
+            "Product",
+            "Price",
+            "Quantity",
+            "Category",
+            "Rating",
+            "Date"
+          ],
+          "dtypes": {
+            "import": "int64",
+            "Product": "object",
+            "Price": "float64",
+            "Quantity": "float64",
+            "Category": "object",
+            "Rating": "float64",
+            "Date": "object"
+          },
+          "analysis": {
+            "time_series": {
+              "note": "Time series analysis requires proper datetime column configuration",
+              "available_columns": [
+                "import",
+                "Product",
+                "Price",
+                "Quantity",
+                "Category",
+                "Rating",
+                "Date"
+              ],
+              "numeric_columns": [
+                "import",
+                "Price",
+                "Quantity",
+                "Rating"
+              ],
+              "trend_analysis_enabled": true
+            }
+          }
+        }
+      ],
+      "status": "completed"
+    },
+    "critique": {
+      "id": "critique_1768992873091_eqspdi6ds",
+      "executionId": "exec_1768992865464_7z8j7cv88",
+      "feedback": "Excellent analysis! The results are comprehensive and well-presented.",
+      "issues": [],
+      "status": "excellent",
+      "timestamp": 1768992873091
+    }
+  },
+  "exportVersion": "1.0"
+}
